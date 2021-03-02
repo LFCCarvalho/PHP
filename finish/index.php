@@ -42,7 +42,14 @@
                         ?>
                         <?php echo $cutePet['weight']; ?> lbs
                     </blockquote>
-
+                    
+                    <p>
+                        <?php 
+                            if(array_key_exists('cpf', $cutePet)){
+                                echo $cutePet['cpf'];
+                            }
+                        ?>
+                    </p>
                     <p>
                         <?php echo $cutePet['bio']; ?>
                     </p>

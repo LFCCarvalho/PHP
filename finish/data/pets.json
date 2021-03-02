@@ -29,5 +29,23 @@
         "bio": "Treats and Snoozin!",
         "image": "pancake.png",
         "breed": "Bulldog"
+    },
+    {
+        "name": "tatatata",
+        "breed": "tatatata",
+        "weight": "5",
+        "cpf": "10475325656",
+        "bio": "3333333333333333",
+        "image": "",
+        "age": ""
+    },
+    {
+        "name": "Bel",
+        "breed": "SHIHUAHUAHUAAUHAUHAUHAHUA",
+        "weight": "3",
+        "cpf": "Invalid cpf",
+        "bio": "testtttttttt",
+        "image": "",
+        "age": ""
     }
 ]

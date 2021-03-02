@@ -21,6 +21,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $weight = '';
     }
 
+    if(isset($_POST['cpf'])){
+        $cpf = $_POST['cpf'];
+        if(!is_valid_cpf($cpf)){
+            $cpf = "Invalid cpf";
+        }
+    }
+
     if (isset($_POST['bio'])) {
         $bio = $_POST['bio'];
     } else {
@@ -32,6 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         'name' => $name,
         'breed' => $breed,
         'weight' => $weight,
+        'cpf' => $cpf,
         'bio' => $bio,
         'image' => '',
         'age' => '',
@@ -66,10 +74,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <input type="number" name="weight" id="pet-weight" class="form-control" />
                 </div>
                 <div class="form-group">
+                    <label for="pet-cpf" class="control-label">Pet CPF</label>
+                    <input type="text" name="cpf" id="pet-cpf" class="form-control">
+                </div>
+                <div class="form-group">
                     <label for="pet-bio" class="control-label">Pet Bio</label>
                     <textarea name="bio" id="pet-bio" class="form-control"></textarea>
                 </div>
-
+                
                 <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-heart"></span> Add</button>
             </form>
 
