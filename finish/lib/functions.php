@@ -14,7 +14,8 @@ function save_pets($petsToSave)
     file_put_contents('data/pets.json', $json);
 }
 
-function cpf_helper($array, $peso) {
+function validCpfHelper($array, $peso) 
+{
     $soma = 0;
 
     for($i = 0; $i < strlen($array); $i++) {
@@ -24,7 +25,7 @@ function cpf_helper($array, $peso) {
     return $soma;
 }
 
-function is_valid_cpf($cpf)
+function isValidCpf($cpf)
 {
     if(strlen($cpf) != 11){
         echo "CPF Inválido";
@@ -33,14 +34,14 @@ function is_valid_cpf($cpf)
 
     $currentCPF = substr($cpf, 0, 9);
     echo $currentCPF . PHP_EOL;
-    $digit1 = 11 - (cpf_helper($currentCPF, 10) % 11);
+    $digit1 = 11 - (validCpfHelper($currentCPF, 10) % 11);
     if($digit1 > 9) {
         $digit1 = 0;
     }
 
     $currentCPF = $currentCPF . $digit1;
 
-    $digit2 = 11 - (cpf_helper($currentCPF, 11) % 11);
+    $digit2 = 11 - (validCpfHelper($currentCPF, 11) % 11);
     if($digit2 > 9) { // resto da divisão é igual a 0 ou 1
         $digit2 = 0;
     }

@@ -21,9 +21,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $weight = '';
     }
 
-    if(isset($_POST['cpf'])){
+    if (isset($_POST['cpf'])) {
         $cpf = $_POST['cpf'];
-        if(!is_valid_cpf($cpf)){
+        if (!isValidCpf($cpf)) {
             $cpf = "Invalid cpf";
         }
     }
