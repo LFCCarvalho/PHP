@@ -27,7 +27,7 @@ function printBiggerSmaller(...$numbers)
 }
 echo printBiggerSmaller(5, 3, 1, 0, -62, 165, 164, 6, -1, -99) . PHP_EOL;
 
-function week_day($number) 
+function weekDay($number) 
 {
     $week = array("Domingo", "Segunda", "Terça", "Quarta",
      "Quinta", "Sexta", "Sabado");
@@ -37,7 +37,7 @@ function week_day($number)
         echo "Valor inválido";
     }
 }
-echo week_day(7) . PHP_EOL;
+echo weekDay(7) . PHP_EOL;
 
 function isTriangle($l1, $l2, $l3)
 {
