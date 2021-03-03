@@ -1,4 +1,6 @@
 <?php
+
+// Questao 1 
 function media(...$number)
 {
     $sum = 0;
@@ -9,24 +11,29 @@ function media(...$number)
 }
 echo media(5, 3, 2, 1, 16, 92) . PHP_EOL;
 
+// Questao 3
 function celsiusToFarenheit($celsius)
 {
     return ($celsius * 1.8 + 32);
 }
 echo celsiusToFarenheit(100) . PHP_EOL;
 
+
+// Questao 4 
 function metersToCentimeters($meters)
 {
     return $meters * 100;
 }
 echo metersToCentimeters(0.53) . PHP_EOL;
 
+// Questao 5
 function printBiggerSmaller(...$numbers) 
 {
     echo max($numbers) . " / " . min($numbers);
 }
 echo printBiggerSmaller(5, 3, 1, 0, -62, 165, 164, 6, -1, -99) . PHP_EOL;
 
+// Questao 6
 function weekDay($number) 
 {
     $week = array("Domingo", "Segunda", "Terça", "Quarta",
@@ -39,6 +46,7 @@ function weekDay($number)
 }
 echo weekDay(7) . PHP_EOL;
 
+// Questao 7
 function isTriangle($l1, $l2, $l3)
 {
     if ($l1 == 0 || $l2 == 0 || $l3 == 0) {
@@ -59,4 +67,3 @@ function isTriangle($l1, $l2, $l3)
     }
 }
 isTriangle(0, 0, 0) . PHP_EOL;
-echo "Teste";
