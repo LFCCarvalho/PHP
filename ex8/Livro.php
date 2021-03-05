@@ -57,18 +57,6 @@ class Livro implements Publicacao
     }
   }
 
-  /*
-  public function detalhes()
-  {
-    echo "Titulo: ".$this->_titulo.PHP_EOL;
-    echo "Autor: ".$this->_autor->getNome().PHP_EOL;
-    echo "Paginas: ".$this->_totPaginas.' '.PHP_EOL;
-    echo "Pagina Atual: ".$this->_pagAtual.' '.PHP_EOL;
-    echo "Aberto: ".($this->_aberto? 'Sim ' : 'Nao ').PHP_EOL;
-    echo "Leitor: ".$this->_leitor->getNome();
-  }
-
-  */
   public function detalhes()
   {
     return array(
